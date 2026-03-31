@@ -29,4 +29,4 @@ This project serves as a showcase of modular software design and efficient resou
 
 ## Repository Map
 * `Falling_Fluffs_Game/`: Contains all source code (`.c`, `.h`) and game assets.
-* `Project_Report/`: Detailed documentation regarding the development and technical specifications of the program.
+* `FF-Project-Report`: Detailed documentation regarding the development and technical specifications of the program.
