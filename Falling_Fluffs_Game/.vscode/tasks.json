@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: gcc.exe build active file",
+            "command": "C:/msys64/msys2_shell.cmd",
+            "args": [
+                "-mingw64",
+                "-defterm",
+                "-no-start",
+                "-here",
+                "-c",
+                "cd \"$PWD\" && gcc snake.c -o snake.exe -I /mingw64/include -L /mingw64/lib -lraylib -lopengl32 -lgdi32 -lwinmm"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Run snake",
+            "command": "${workspaceFolder}/snake.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": ["C/C++: gcc.exe build active file"]
+        }
+    ]
+}
